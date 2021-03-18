@@ -50,7 +50,7 @@ public class TwitchChat : MonoBehaviour
         TwitchChatClient.instance.SendChatMessage(
             $"Hello {chatCommand.User.DisplayName}! This message will be sent in 5 seconds.", 5);
 
-        string message = $"{chatCommand.Command}";
+        string message = $"{chatCommand.Command} - {parameters}";
         TMP_Text newText = Instantiate(commandTextPrefab, commandsPanel).GetComponent<TMP_Text>();
         newText.text = message;
         commandText.Add(newText);
