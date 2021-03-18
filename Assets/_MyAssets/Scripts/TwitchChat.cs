@@ -40,11 +40,11 @@ public class TwitchChat : MonoBehaviour
     void ShowCommand(TwitchChatCommand chatCommand)
     {
         TwitchConnectData a = ScriptableObject.CreateInstance<TwitchConnectData>();
-        //string parameters = string.Join(" - ", chatCommand.Parameters);
+        string parameters = string.Join(" - ", chatCommand.Parameters);
         //string message =
         //    $"Command: '{chatCommand.Command}' - Username: {chatCommand.User.DisplayName} - Bits: {chatCommand.Bits} - Sub: {chatCommand.User.IsSub} - Parameters: {parameters}";
 
-        
+
 
         TwitchChatClient.instance.SendChatMessage($"Hello {chatCommand.User.DisplayName}! I received your message.");
         TwitchChatClient.instance.SendChatMessage(
